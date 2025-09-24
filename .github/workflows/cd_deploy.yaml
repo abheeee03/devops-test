@@ -18,6 +18,6 @@ jobs:
       with:
           host: ${{ secrets.HOST }}
           username: ubuntu
-          key: ${{ secrets.SSH_PVT_KRY }}
+          key: ${{ secrets.SSH_PVT_KEY }}
           port: 22
           script: ls
