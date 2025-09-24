@@ -23,4 +23,9 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PVT_KEY }}
           port: 22
-          script: ls
+          script: |
+            sudo npm install -g pnpm
+            cd devops-test
+            git pull origin main
+            pnpm install
+            pm2 start pnpm --name "turbo-repo" -- run start  
