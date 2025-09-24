@@ -13,6 +13,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: testing keys
+      run: echo ${{secrets.TEST }}
+
     - name: Execute remote SSH
       uses: appleboy/ssh-action@v1
       with:
